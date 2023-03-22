@@ -5,7 +5,7 @@
 
 def print_number(a, b):  # Эта функция выводит числа по возрастанию
     if a == b:
-        return f"{a}"
+        return a
     if a > b:
         return f"{a}, {print_number(a - 1, b)}"
     if a < b:
