@@ -14,24 +14,25 @@ for _ in range(count_grade_book):
 print(grade_book)
 
 
-def reverse_grade_book():
+def return_max_min(numbers):
     """Функция для нахождения максимума и минимума"""
-    max_grade = float("-inf")
-    min_grade = float("inf")
-    for j in grade_book:
-        if j > max_grade:
-            max_grade = j
-        elif j < min_grade:
-            min_grade = j
-    return [min_grade, max_grade]
+    max_num = float("-inf")
+    min_num = float("inf")
+    for j in numbers:
+        if j > max_num:
+            max_num = j
+        elif j < min_num:
+            min_num = j
+    return min_num, max_num
 
 
-min_grade_reverse = reverse_grade_book()[0]
-max_grade_reverse = reverse_grade_book()[1]
+def replace_max_min(numbers):
+    """Функция заменяет максимальные значения на минимальные"""
+    min_grade, max_grade = return_max_min(numbers)
+    for i, num in enumerate(numbers):
+        if num == max_grade:
+            numbers[i] = min_grade
+    return numbers
 
 
-for i, num in enumerate(grade_book):
-    if num == max_grade_reverse:
-        grade_book[i] = min_grade_reverse
-
-print(grade_book)
+print(replace_max_min(grade_book))
