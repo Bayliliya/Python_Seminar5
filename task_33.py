@@ -29,13 +29,9 @@ def reverse_grade_book():
 min_grade_reverse = reverse_grade_book()[0]
 max_grade_reverse = reverse_grade_book()[1]
 
-grade_book_revers = []
 
-for i in grade_book:
-    if i == max_grade_reverse:
-        i = min_grade_reverse
-        grade_book_revers.append(i)
-    else:
-        grade_book_revers.append(i)
+for i, num in enumerate(grade_book):
+    if num == max_grade_reverse:
+        grade_book[i] = min_grade_reverse
 
-print(grade_book_revers)
+print(grade_book)
