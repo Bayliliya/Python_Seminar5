@@ -8,7 +8,7 @@
 def sequence_printing(n):
     """Функция выводит элементы в обратном порядке"""
     if n == 0:  # Выход из рекурсии
-        return ''
+        return '!'
     k = int(input())
     # Вычетаем -1, иначе не достигнем базового случая
     return sequence_printing(n - 1) + f' {k}'
