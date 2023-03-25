@@ -7,14 +7,12 @@
 
 def rekurs_sum_a_b(a, b):
     """Рекурсивная функция нахождения суммы неотрицательных чисел"""
-    if a == 0:
-        return 0
     if b == 0:
-        return 1 + rekurs_sum_a_b(a - 1, 0)
+        return a
     return 1 + rekurs_sum_a_b(a, b - 1)
 
 
-N = int(input("N: "))
-M = int(input("M: "))
+n = int(input("N: "))
+m = int(input("M: "))
 
-print(f'Сумма введенных чисел: {rekurs_sum_a_b(N, M)}')
+print(f'Сумма введенных чисел: {rekurs_sum_a_b(n, m)}')
